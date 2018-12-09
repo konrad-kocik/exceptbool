@@ -16,9 +16,6 @@ def except_to_bool(_func=None, *, exc=Exception, to=False):
     :param to: value to which caught exception will be converted and returned;
                defaults to False
     :type: bool
-    :return: value specified in 'to' param if one of given exceptions will be caught,
-             negation of specified value otherwise.
-    :rtype: bool
     """
     def decorator(func):
         @wraps(func)
