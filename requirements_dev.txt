@@ -3,6 +3,6 @@ wheel==0.32.3
 flake8~=3.5.0
 tox~=3.5.2
 pytest~=3.8.2
-coverage~=4.5.1
+pytest-cov~=2.6.0
 Sphinx~=1.8.1
 twine~=1.12.1

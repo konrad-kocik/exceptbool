@@ -26,7 +26,7 @@ setup(
     name='exceptbool',
     packages=find_packages(include=['exceptbool']),
     test_suite='tests',
-    tests_require=['pytest'],
+    tests_require=['pytest~=3.8.2', 'pytest-cov~=2.6.0', 'tox~=3.5.2', 'flake8~=3.5.0'],
     url='https://github.com/konrad-kocik/exceptbool',
     version='1.0.0',
     zip_safe=False,
