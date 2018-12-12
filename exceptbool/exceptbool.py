@@ -10,7 +10,7 @@ def except_to_bool(_func=None, *, exc=Exception, to=False):
     If exception different than given one will be raised, then it will not be caught.
 
     :param _func: filled automatically by decorator with decorated function -
-                  DO NOT fill this param manually.
+                  DO NOT fill this param manually
     :param exc: exception(s) to catch and convert; defaults to Exception
     :type exc: BaseException or tuple(BaseException)
     :param to: value to which caught exception will be converted and returned;
