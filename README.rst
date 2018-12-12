@@ -92,7 +92,7 @@ Once you have a copy of the source, you can install it with:
 Usage
 =====
 
-First import ``except_to_bool`` decorator into current namespace:
+First, import ``except_to_bool`` decorator into current namespace:
 
 .. code-block:: python
 
