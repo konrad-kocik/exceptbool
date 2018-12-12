@@ -6,8 +6,6 @@ Welcome to exceptbool's documentation!
    :caption: Contents:
 
    readme
-   installation
-   usage
    contributing
    authors
    history
