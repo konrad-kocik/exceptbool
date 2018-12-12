@@ -58,34 +58,44 @@ Get Started!
 Ready to contribute? Here's how to set up `exceptbool` for local development.
 
 1. Fork the `exceptbool` repo on GitHub.
-2. Clone your fork locally::
+2. Clone your fork locally:
+
+.. code-block:: console
 
     $ git clone git@github.com:your_name_here/exceptbool.git
 
-3. Prepare your development environment in a virtualenv. Assuming you have virtualenvwrapper installed::
+3. Prepare your development environment in a virtualenv. Assuming you have virtualenvwrapper installed:
+
+.. code-block:: console
 
     $ mkvirtualenv exceptbool
     $ cd exceptbool/
     $ pip install -r requirements_dev.txt
 
-4. Create a branch for local development::
+4. Create a branch for local development:
+
+.. code-block:: console
 
     $ git checkout -b name-of-your-bugfix-or-feature
 
-   Now you can make your changes locally.
+5. Now you can make your changes locally.
 
-5. When you're done making changes, check that your changes pass flake8 and the
-   tests, including testing other Python versions with tox::
+6. When you're done making changes, check that your changes pass flake8 and the
+   tests, including testing other Python versions with tox:
+
+.. code-block:: console
 
     $ tox
 
-6. Commit your changes and push your branch to GitHub::
+7. Commit your changes and push your branch to GitHub:
+
+.. code-block:: console
 
     $ git add .
     $ git commit -m "Your detailed description of your changes."
     $ git push origin name-of-your-bugfix-or-feature
 
-7. Submit a pull request through the GitHub website.
+8. Submit a pull request through the GitHub website.
 
 Pull Request Guidelines
 -----------------------
@@ -104,7 +114,9 @@ Deploying
 
 A reminder for the maintainers on how to deploy.
 Make sure all your changes are committed.
-Then run::
+Then run:
 
-$ make dist
-$ twine upload dist/*
+.. code-block:: console
+
+    $ make dist
+    $ twine upload dist/*

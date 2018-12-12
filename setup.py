@@ -1,5 +1,8 @@
 from setuptools import setup, find_packages
 
+from exceptbool import __version__
+
+
 with open('README.rst') as readme_file:
     readme = readme_file.read()
 
@@ -28,6 +31,6 @@ setup(
     test_suite='tests',
     tests_require=['pytest~=3.8.2', 'pytest-cov~=2.6.0', 'tox~=3.5.2', 'flake8~=3.5.0'],
     url='https://github.com/konrad-kocik/exceptbool',
-    version='1.0.0',
+    version=__version__,
     zip_safe=False,
 )
