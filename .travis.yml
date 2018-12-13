@@ -3,7 +3,8 @@ language: python
 matrix:
   include:
     - python: 3.6
-      env: TOXENV=flake8
-
+      env: TOXENV=style
+install:
+  - pip install -r requirements.txt
 script:
   - ./.travis/run tox
