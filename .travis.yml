@@ -2,7 +2,11 @@ language: python
 matrix:
   include:
     - python: 3.6
+      env: TOXENV=py36
+    - python: 3.6
       env: TOXENV=style
+    - python: 3.6
+      env: TOXENV=docs
 install:
   - pip install -r requirements_dev.txt
 script:
