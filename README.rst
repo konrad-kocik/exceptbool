@@ -8,6 +8,9 @@ exceptbool
 .. image:: https://pepy.tech/badge/exceptbool
         :target: https://pepy.tech/badge/exceptbool
 
+.. image:: https://travis-ci.org/konrad-kocik/exceptbool.svg?branch=master
+        :target: https://travis-ci.org/konrad-kocik/exceptbool.svg?branch=master
+
 .. image:: https://readthedocs.org/projects/exceptbool/badge/?version=latest
         :target: https://exceptbool.readthedocs.io/en/latest/?badge=latest
 
