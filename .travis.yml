@@ -22,5 +22,7 @@ matrix:
       dist: xenial
       sudo: true
 
+install:
+  - pip install -r requirements_dev.txt
 script:
   - tox
