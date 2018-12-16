@@ -136,3 +136,11 @@ def test_except_to_bool_passes_params_to_decorated_function():
     decorated_function(function_side_effect, positional_param, keyword_arg=keyword_param)
 
     assert function_side_effect == [positional_param + keyword_param]
+
+
+def test_except_to_bool_raises_error_when_providing_positional_arguments_to_decorator():
+    with raises(TypeError) as error:
+        @except_to_bool(None, MemoryError, True)
+        def decorated_function():
+            pass
+    assert 'except_to_bool() takes from 0 to 1 positional arguments but 3 were given' in str(error)
