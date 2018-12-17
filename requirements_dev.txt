@@ -4,5 +4,6 @@ flake8~=3.5.0
 tox~=3.5.2
 pytest~=3.8.2
 pytest-cov~=2.6.0
+mutmut~=1.1.0
 sphinx~=1.8.1
 twine~=1.12.1
