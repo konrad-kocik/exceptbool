@@ -143,4 +143,17 @@ def test_except_to_bool_raises_error_when_providing_positional_arguments_to_deco
         @except_to_bool(None, MemoryError, True)
         def decorated_function():
             pass
+
     assert 'except_to_bool() takes from 0 to 1 positional arguments but 3 were given' in str(error)
+
+
+def test_except_to_bool_does_not_change_identity_of_decorated_function():
+    @except_to_bool
+    def decorated_function():
+        """
+        This is a decorated function.
+        """
+        pass
+
+    assert decorated_function.__name__ == 'decorated_function'
+    assert 'This is a decorated function.' in decorated_function.__doc__
