@@ -21,7 +21,7 @@ def except_to_bool(_func=None, *, exc=Exception, to=False):
     def decorator(func):
         @wraps(func)
         def wrapper(*args, **kwargs):
-            logging.debug(f"Catching {exc} and converting it to {to} in '{func.__name__}' function")
+            logging.debug("Catching {} and converting it to {} in '{}' function".format(exc, to, func.__name__))
             try:
                 func(*args, **kwargs)
                 return not to
