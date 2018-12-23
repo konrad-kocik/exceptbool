@@ -1,4 +1,5 @@
 from pytest import raises
+from unittest.mock import patch
 
 from exceptbool import except_to_bool
 
@@ -157,3 +158,14 @@ def test_except_to_bool_does_not_change_identity_of_decorated_function():
 
     assert decorated_function.__name__ == 'decorated_function'
     assert 'This is a decorated function.' in decorated_function.__doc__
+
+
+@patch('logging.debug')
+def test_except_to_bool_logs_debug_message_when_catching_exception(debug_logger):
+    @except_to_bool
+    def decorated_function():
+        pass
+
+    decorated_function()
+
+    debug_logger.assert_called_once_with("Catching <class 'Exception'> and converting it to False in 'decorated_function' function")
