@@ -4,7 +4,7 @@ from exceptbool.bool_wrapper import BoolWrapper
 
 
 @contextmanager
-def except_converter(exc=Exception, to=False):
+def except_converter(*, exc=Exception, to=False):
     result = BoolWrapper(not to)
     try:
         yield result
