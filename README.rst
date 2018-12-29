@@ -73,7 +73,7 @@ You can either clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/konrad-kocik/exceptbool
+    $ git clone https://github.com/konrad-kocik/exceptbool.git
 
 Or download the `tarball`_:
 
