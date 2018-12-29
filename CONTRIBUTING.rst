@@ -107,7 +107,9 @@ Before you submit a pull request, check that it meets these guidelines:
    your new functionality into a function with a docstring, add the
    feature to the list in README.rst and update HISTORY.rst.
 3. Increase version number in setup.py
-4. The pull request should work for Python 3.6 and 3.7.
+4. The pull request should work for Python 3.5, 3.6 and 3.7. Check
+   https://travis-ci.org/konrad-kocik/exceptbool/pull_requests
+   and make sure that the tests pass for all supported Python versions.
 
 Deploying
 ---------
@@ -118,5 +120,4 @@ Then run:
 
 .. code-block:: console
 
-    $ make dist
-    $ twine upload dist/*
+    $ make release
