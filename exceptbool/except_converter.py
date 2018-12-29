@@ -9,4 +9,4 @@ def except_converter(exc=Exception, to=False):
     try:
         yield result
     except exc:
-        result.value = bool(to)
+        result.wrap(bool(to))
