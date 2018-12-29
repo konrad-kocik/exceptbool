@@ -3,8 +3,8 @@ class BoolWrapper:
         self._wrapped_bool = None
         self.wrap(bool_to_wrap)
 
-    def __str__(self):
-        return str(self._wrapped_bool)
+    def __repr__(self):
+        return repr(self._wrapped_bool)
 
     def __bool__(self):
         return self._wrapped_bool
