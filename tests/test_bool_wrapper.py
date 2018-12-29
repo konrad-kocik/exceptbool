@@ -20,10 +20,25 @@ def test_init_sets_correct_wrapped_bool(expected_bool):
     assert bool_wrapper._wrapped_bool is expected_bool
 
 
+@mark.parametrize('not_a_bool, expected_bool', [("a", True), ("", False)])
+def test_init_sets_correct_wrapped_bool_when_wrapping_not_a_bool(not_a_bool, expected_bool):
+    bool_wrapper = BoolWrapper(bool_to_wrap=not_a_bool)
+
+    assert bool_wrapper._wrapped_bool is expected_bool
+
+
 @mark.parametrize('expected_bool', [True, False])
 def test_wrap_changes_wrapped_bool_to_correct_value(expected_bool):
     bool_wrapper = BoolWrapper(bool_to_wrap=not expected_bool)
     bool_wrapper.wrap(bool_to_wrap=expected_bool)
+
+    assert bool_wrapper._wrapped_bool is expected_bool
+
+
+@mark.parametrize('not_a_bool, expected_bool', [("a", True), ("", False)])
+def test_wrap_changes_wrapped_bool_to_correct_value_when_wrapping_not_a_bool(not_a_bool, expected_bool):
+    bool_wrapper = BoolWrapper(bool_to_wrap=not expected_bool)
+    bool_wrapper.wrap(bool_to_wrap=not_a_bool)
 
     assert bool_wrapper._wrapped_bool is expected_bool
 

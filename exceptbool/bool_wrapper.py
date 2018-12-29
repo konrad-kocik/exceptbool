@@ -10,4 +10,4 @@ class BoolWrapper:
         return self._wrapped_bool
 
     def wrap(self, bool_to_wrap):
-        self._wrapped_bool = bool_to_wrap
+        self._wrapped_bool = bool(bool_to_wrap)
