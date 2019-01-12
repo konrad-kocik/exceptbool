@@ -2,6 +2,11 @@
 History
 =======
 
+1.2.0 (2019-01-12)
+------------------
+
+* Added possibility to convert exceptions by using context manager.
+
 1.1.0 (2018-12-18)
 ------------------
 
