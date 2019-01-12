@@ -1,4 +1,4 @@
-class BoolWrapper:
+class ConvertedExcept:
     def __init__(self, bool_to_wrap):
         self._wrapped_bool = None
         self.wrap(bool_to_wrap)
