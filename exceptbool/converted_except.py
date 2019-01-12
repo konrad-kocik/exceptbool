@@ -1,13 +1,11 @@
 class ConvertedExcept:
-    def __init__(self, bool_to_wrap):
-        self._wrapped_bool = None
-        self.wrap(bool_to_wrap)
+    def __init__(self, value):
+        self._value = bool(value)
 
-    def __repr__(self):
-        return repr(self._wrapped_bool)
+    @property
+    def value(self):
+        return self._value
 
-    def __bool__(self):
-        return self._wrapped_bool
-
-    def wrap(self, bool_to_wrap):
-        self._wrapped_bool = bool(bool_to_wrap)
+    @value.setter
+    def value(self, new_value):
+        self._value = bool(new_value)
