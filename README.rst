@@ -37,11 +37,18 @@ Ugh! A perfect example of six-line boilerplate code. With exceptbool you can sho
 
 .. code-block:: python
 
- @except_to_bool(exc=DoingSomethingError)
- def is_something_possible():
-     do_something()
+    @except_to_bool(exc=DoingSomethingError)
+    def is_something_possible():
+        do_something()
 
 Exceptbool makes decorated function return bool instead of raising an exception by converting given exception(s) into given bool value. If no exception will be raised, then negation of given bool will be returned. If exception different than given one will be raised, then it will not be caught.
+
+Don't want to decorate whole function? Fine, you can convert exceptions raised from chosen block of code by using context manager:
+
+.. code-block:: python
+
+    with except_converter(exc=DoingSomethingError) as converted_exception:
+        do_something()
 
 ============
 Installation
@@ -95,6 +102,9 @@ Once you have a copy of the source, you can install it with:
 Usage
 =====
 
+As decorator
+------------
+
 First, import ``except_to_bool`` decorator into current namespace:
 
 .. code-block:: python
@@ -140,3 +150,39 @@ Function decorated with ``except_to_bool`` is perfectly capable of accepting pos
         error_raising_function(*args, **kwargs)
 
     decorated_function("foo", bar="baz")  # no error
+
+As context manager
+------------------
+
+First, import ``except_converter`` context manager into current namespace:
+
+.. code-block:: python
+
+     from exceptbool import except_converter
+
+To catch any exception and convert it into False:
+
+.. code-block:: python
+
+    with except_converter() as converted_exception:
+        error_raising_function()
+
+Now ``converted_exception.value`` will return False if ``error_raising_function`` raises Exception, True otherwise.
+
+To catch given exception and convert it into given bool value:
+
+.. code-block:: python
+
+    with except_converter(exc=ValueError, to=True) as converted_exception:
+       error_raising_function()
+
+Now ``converted_exception.value`` will return True if ``error_raising_function`` raises ValueError, False otherwise.
+
+To catch any of multiple exceptions:
+
+.. code-block:: python
+
+    with except_converter(exc=(OSError, KeyError)) as converted_exception:
+       error_raising_function()
+
+Now ``converted_exception.value`` will return False if ``error_raising_function`` raises OSError or KeyError, True otherwise.
