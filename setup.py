@@ -26,7 +26,7 @@ setup(
     license="MIT license",
     long_description=readme + '\n\n' + history,
     include_package_data=True,
-    keywords='except exception catching bool boolean decorator',
+    keywords='except exception catching bool boolean decorator context manager',
     name='exceptbool',
     packages=find_packages(include=['exceptbool']),
     test_suite='tests',
