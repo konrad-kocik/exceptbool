@@ -43,7 +43,7 @@ Ugh! A perfect example of six-line boilerplate code. With exceptbool you can sho
 
 Exceptbool makes decorated function return bool instead of raising an exception by converting given exception(s) into given bool value. If no exception will be raised, then negation of given bool will be returned. If exception different than given one will be raised, then it will not be caught.
 
-Don't want to decorate whole function? Fine, you can convert exceptions raised from chosen block of code by using context manager:
+Don't want to decorate whole function? Fine, you can convert exception raised from chosen block of code by using context manager:
 
 .. code-block:: python
 
