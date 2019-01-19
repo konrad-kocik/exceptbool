@@ -6,6 +6,7 @@ Welcome to exceptbool's documentation!
    :caption: Contents:
 
    readme
+   docstrings
    contributing
    authors
    history
