@@ -16,8 +16,11 @@ exceptbool
 
 Converts caught exception into bool value.
 
-* Free software: MIT license
+* Free software: `MIT license`_
 * Documentation: https://exceptbool.readthedocs.io.
+* Issue reporting: https://github.com/konrad-kocik/exceptbool/issues/new
+
+.. _MIT license: https://opensource.org/licenses/MIT
 
 Features
 --------
